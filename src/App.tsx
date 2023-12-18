@@ -1,5 +1,19 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Overview from "./components/Overview";
+
 function App() {
-  return <></>;
+  return (
+    <main className="">
+      <div className="absolute left-0 top-0 bg-light-top-bg dark:bg-dark-top-bg w-full h-[300px]"></div>
+      <div className="absolute left-0 top-[300px] bg-light-bg dark:bg-dark-bg w-full h-[calc(100%-300px)]"></div>
+      <div className="container mx-auto relative">
+        <Header />
+        <Hero />
+        <Overview />
+      </div>
+    </main>
+  );
 }
 
 export default App;
