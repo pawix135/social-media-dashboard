@@ -5,10 +5,7 @@ const ThemeSwitch: React.FC = () => {
   const [theme, toggle] = useDark();
 
   return (
-    <div className="flex flex-row gap-5">
-      <span className="font-bold text-light-dark-greyish-blue dark:text-dark-text">
-        Dark Mode
-      </span>
+    <div className="flex flex-row">
       <label
         htmlFor="switch"
         className={classNames(
