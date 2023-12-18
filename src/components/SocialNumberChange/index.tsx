@@ -1,5 +1,6 @@
 import upIcon from "../../assets/icon-up.svg";
 import downIcon from "../../assets/icon-down.svg";
+import classNames from "classnames";
 
 interface Props {
   change: SocialChange;
@@ -22,9 +23,14 @@ const SocialNuberChange: React.FC<Props> = ({
     : change.value;
 
   return (
-    <span>
+    <span className="flex flex-row gap-2 items-center">
       <img src={change.type == "up" ? upIcon : downIcon} alt="up" />
-      <span>
+      <span
+        className={classNames("font-semibold", {
+          "text-primary-lime": change.type == "up",
+          "text-primary-red": change.type == "down",
+        })}
+      >
         {displayValue}
         {type && "%"} {text}
       </span>

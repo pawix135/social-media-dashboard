@@ -21,6 +21,7 @@ const ThemeSwitch: React.FC = () => {
         )}
       >
         <button
+          tabIndex={0}
           id="switch"
           type="button"
           onClick={toggle}

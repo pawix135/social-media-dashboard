@@ -29,7 +29,7 @@ const hero_socials: Social[] = [
 
 const Hero: React.FC = () => {
   return (
-    <section>
+    <section className="grid grid-flow-row grid-cols-1 grid-rows-4  md:grid-flow-col md:grid-cols-4 md:grid-rows-1 gap-10">
       {hero_socials.map((social, index) => {
         return <SocialCard social={social} key={`social-${index}`} />;
       })}

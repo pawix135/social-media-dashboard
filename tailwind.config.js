@@ -33,4 +33,11 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    "facebook",
+    "twitter",
+    "instagram-from",
+    "instagram-to",
+    "youtube",
+  ],
 };
