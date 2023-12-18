@@ -9,7 +9,7 @@ const SocialCard: React.FC<Props> = ({ social }) => {
   return (
     <div
       className={classNames(
-        "hover:bg-light-toggle/50 transition-colors hover:cursor-pointer flex flex-col relative gap-5 bg-light-card-bg dark:bg-dark-card-bg rounded-md items-center py-10",
+        "hover:bg-light-toggle/50 hover:dark:bg-dark-desaturated-blue/25 transition-colors hover:cursor-pointer flex flex-col relative gap-5 bg-light-card-bg dark:bg-dark-card-bg rounded-md items-center py-10",
         "before:absolute before:-top-[2px] before:left-0 before:w-full before:h-[5px] before:rounded-t-full",
         {
           "before:bg-facebook": social.type == "facebook",

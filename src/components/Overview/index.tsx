@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import OverviewCard from "../OverviewCard";
 
 const socials_overview: SocialOverview[] = [
@@ -61,10 +62,19 @@ const socials_overview: SocialOverview[] = [
 
 const Overview = () => {
   return (
-    <section>
-      {socials_overview.map((overview, index) => {
-        return <OverviewCard overview={overview} key={`overview-${index}`} />;
-      })}
+    <section className="flex flex-col gap-10 mt-10">
+      <h2 className="text-light-dark-greyish-blue dark:text-dark-text font-semibold text-2xl md:text-4xl">
+        Overview - Today
+      </h2>
+      <div
+        className={classNames(
+          "grid grid-flow-row grid-cols-1 grid-rows-8 md:grid-flow-col md:grid-cols-4 grid-rows-2 gap-5 md:gap-10"
+        )}
+      >
+        {socials_overview.map((overview, index) => {
+          return <OverviewCard overview={overview} key={`overview-${index}`} />;
+        })}
+      </div>
     </section>
   );
 };

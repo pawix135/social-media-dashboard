@@ -26,7 +26,7 @@ const SocialNuberChange: React.FC<Props> = ({
     <span className="flex flex-row gap-2 items-center">
       <img src={change.type == "up" ? upIcon : downIcon} alt="up" />
       <span
-        className={classNames("font-semibold", {
+        className={classNames("font-bold", {
           "text-primary-lime": change.type == "up",
           "text-primary-red": change.type == "down",
         })}
